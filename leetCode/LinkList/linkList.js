@@ -13,8 +13,10 @@ class LL {
     length() {
         console.log("Number of items in Linklist ", this.size)
     }
+    linkListHead() {
+        return this.head
+    }
     display() {
-        console.clear()
         if (this.head == null) {
             console.log("No data")
         } else {
@@ -46,7 +48,6 @@ class LL {
     }
     addInMiddle(whereToInsert, data) {
         let newNode = new node(data)
-        newNode.next = null
         this.size++
         if (this.head == null) {
             this.head = newNode
